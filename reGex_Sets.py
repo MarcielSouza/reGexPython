@@ -128,16 +128,37 @@ print("\n006-----------------------------------------\n")
 # Set 	                                            Description
 # [a-zA-Z]           Retorna uma correspondência para qualquer caractere em ordem alfabética entre aez, minúsculas OU maiúsculas
 
-txtf = "8 times before 11:45 AM"
+txtg = "8 times before 11:45 AM"
 
-#Verifique se a string possui números de dois dígitos, de 00 a 59:
+#Verifique se a string possui algum caractere de a a z minúsculo e de A a Z maiúsculo:
 
-f = re.findall("[0-5][0-9]", txtf)
+g = re.findall("[a-zA-Z]", txtg)
 
-print(f)
+print(g)
 
-if f:
+if g:
   print("Yes, there is at least one match!")
 else:
   print("No match")
+
+#----==============================================================================================================================================================----#
+
+print("\n007-----------------------------------------\n")
+
+# Set 	                                            Description
+#[+] 	     Em conjuntos, +, *, ., |, (), $,{} não tem significado especial, então [+] significa: retornar uma correspondência para qualquer caractere + na string
+
+txth = "8 times before 11:45 AM"
+
+#Verifica se a string tem algum caractere +:
+
+h = re.findall("[+]", txth)
+
+print(h)
+
+if h:
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+
 
